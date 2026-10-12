@@ -1,6 +1,6 @@
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-7289da?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/unPZxXAtfb)
 
-# 🎃 GPO Halloween for Linux v1.0 - GUIDE
+# 🎃 GPO Halloween Trick Or Treat Macro for Linux v1.0 - GUIDE
 
 **💬 Join our Discord server:** https://discord.gg/unPZxXAtfb
 
