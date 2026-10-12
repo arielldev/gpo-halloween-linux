@@ -155,7 +155,7 @@ Everything is relative to a maximized Roblox window, and the macro keeps Roblox 
 
 ## 🧾 Settings JSON
 
-Settings live in `%APPDATA%\gpo-halloween\settings.json`. **Settings › Defaults & JSON › Export** writes `settings-export.json` next to it, and the copy button puts the JSON on your clipboard. To make your setup the built-in defaults, replace `src-tauri/defaults.json` with it and rebuild.
+Settings live in `~/.config/gpo-halloween/settings.json`. **Settings › Defaults & JSON › Export** writes `settings-export.json` next to it, and the copy button puts the JSON on your clipboard. To make your setup the built-in defaults, replace `src-tauri/defaults.json` with it and rebuild.
 
 Every point and area is **relative to the Roblox window** (0 to 1).
 
@@ -219,7 +219,7 @@ A click with `"point": null` still needs picking, and the macro won't start unti
 
 ```
 src-tauri/src/
-├── core/platform/       # OS traits (window, capture, input, clipboard, OCR) + Windows implementations
+├── core/platform/       # OS traits (window, capture, input, clipboard, OCR) + Linux (X11) and Windows implementations
 ├── core/timer.rs        # Clock parsing and the consistency filter
 ├── bot/                 # Cycle machine, actions, recorder, timer watch, watchdog, session stats
 ├── config.rs            # Settings, steps, presets, JSON export
