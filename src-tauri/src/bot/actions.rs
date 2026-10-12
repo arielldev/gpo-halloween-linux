@@ -17,6 +17,19 @@ pub fn click(ctx: &Ctx, p: PxPoint, button: MouseButton) -> bool {
     if !ctx.sleep_ms(settle) {
         return false;
     }
+    if cfg!(target_os = "linux") {
+        for _ in 0..3 {
+            let at = input.cursor();
+            if at == p {
+                break;
+            }
+            ctx.log_info(&format!("Cursor was at {},{} instead of {},{}; moving it again before clicking", at.x, at.y, p.x, p.y));
+            input.move_to(p);
+            if !ctx.sleep_ms(settle) {
+                return false;
+            }
+        }
+    }
     input.button(button, true);
     let ok = ctx.sleep_ms(hold);
     input.button(button, false);
