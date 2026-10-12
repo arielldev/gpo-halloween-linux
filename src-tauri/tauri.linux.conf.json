@@ -1,0 +1,92 @@
+{
+  "app": {
+    "windows": [
+      {
+        "label": "hud",
+        "title": "GPO Halloween",
+        "url": "index.html?view=hud",
+        "width": 340,
+        "height": 56,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "resizable": false,
+        "skipTaskbar": true,
+        "shadow": false,
+        "visible": false,
+        "focus": false
+      },
+      {
+        "label": "panel",
+        "title": "GPO Halloween",
+        "url": "index.html?view=panel",
+        "width": 480,
+        "height": 720,
+        "minWidth": 420,
+        "minHeight": 520,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "resizable": true,
+        "skipTaskbar": false,
+        "shadow": false,
+        "visible": false,
+        "center": true
+      },
+      {
+        "label": "guide",
+        "title": "GPO Halloween · How to set up",
+        "url": "index.html?view=guide",
+        "width": 680,
+        "height": 560,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "resizable": false,
+        "skipTaskbar": false,
+        "shadow": false,
+        "visible": false,
+        "center": true,
+        "create": false
+      },
+      {
+        "label": "overlay",
+        "title": "GPO Halloween Overlay",
+        "url": "index.html?view=overlay",
+        "width": 800,
+        "height": 600,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "resizable": false,
+        "skipTaskbar": true,
+        "shadow": false,
+        "visible": false,
+        "focus": false,
+        "create": false
+      }
+    ]
+  },
+  "bundle": {
+    "targets": [
+      "deb"
+    ],
+    "createUpdaterArtifacts": false,
+    "linux": {
+      "deb": {
+        "depends": [
+          "tesseract-ocr",
+          "tesseract-ocr-eng",
+          "xclip"
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://github.com/arielldev/gpo-halloween-linux/releases/latest/download/latest.json"
+      ]
+    }
+  }
+}
